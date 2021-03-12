@@ -30,6 +30,9 @@
     <ClInclude Include="..\asteriods\src\triangle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\asteriods\src\utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\CMakeLists.txt" />

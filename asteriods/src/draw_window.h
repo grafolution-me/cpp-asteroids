@@ -26,7 +26,7 @@ class draw_window : public ml5::window, MI5_DERIVE(draw_window, ml5::window){
 		wxPoint point_top{ (draw_window::get_width() / 2), (draw_window::get_height() / 2) - SHIP_SIZE };
 		wxPoint point_bottom_left{ (draw_window::get_width() / 2) - SHIP_SIZE/2, (draw_window::get_height() / 2) + SHIP_SIZE };
 		wxPoint point_bottom_right{ (draw_window::get_width() / 2) + SHIP_SIZE/2, (draw_window::get_height() / 2) + SHIP_SIZE };
-		std::array<wxPoint, 3> points{ point_top, point_bottom_right, point_bottom_left };
+		std::array<wxRealPoint, 3> points{ point_top, point_bottom_right, point_bottom_left };
 		m_p_player = std::make_unique<triangle>(wxRect{ point_top_left, point_bottom_right }, points, point_bottom_left, m_pen, m_brush);
 
 	}
