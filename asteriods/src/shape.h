@@ -13,8 +13,7 @@ public:
 		m_brush{ brush },
 		m_pen{ pen },
 		m_box{ box } {
-	}
-	explicit shape(const wxRect& box, const	std::array<wxPoint, 3> m_points, wxPoint middle, const wxPen& pen, const wxBrush& brush) :
+	}	explicit shape(const wxRect& box, const	std::array<wxRealPoint, 3> m_points, wxPoint middle, const wxPen& pen, const wxBrush& brush) :
 		m_brush{ brush },
 		m_pen{ pen },
 		m_box{ box },
@@ -28,11 +27,11 @@ public:
 		context.SetPen(m_pen);
 		do_draw(context);
 	}
-	wxPoint& rotate(wxRealPoint p, double Cx, double Cy, int angle) {
+	wxRealPoint& rotate(wxRealPoint p, double Cx, double Cy, int angle) {
 		double	Rx = (Cx * cos(angle * (M_PI / 180)) - (Cy * sin(angle * (M_PI / 180))));
 		double	Ry = (Cx * sin(angle * (M_PI / 180)) + (Cy * cos(angle * (M_PI / 180))));
 
-		wxPoint  p_return(std::round(Rx) + p.x, std::round(Ry) + p.y) ;
+		wxRealPoint  p_return(std::round(Rx) + p.x, std::round(Ry) + p.y) ;
 		return p_return;
 	}
 	void move(const int offset) {
@@ -51,28 +50,6 @@ public:
 			wxRealPoint position = m_points[i];
 			m_points[i] = rotate(center, position.x - center.x, position.y - center.y, offset);
 		}
-	/*	wxPoint p_bottom_left = m_box.GetBottomLeft();
-		wxPoint p_bottom_right = m_box.GetBottomRight();
-		wxPoint p_top_left = m_box.GetTopLeft();
-		wxPoint p_top_right = m_box.GetTopRight();
-		ml5::vector<wxPoint> v_points{};
-		v_points.add(p_bottom_left);
-		v_points.add(p_bottom_right);
-		v_points.add(p_top_left);
-		v_points.add(p_top_right);
-		center_x = 0;
-		center_y = 0;
-		for (wxPoint point : v_points)
-		{
-			center_x += point.x;
-			center_y += point.y;
-		}
-		wxPoint center_box{ center_x / 4, center_y / 4 };
-		m_box.SetBottomLeft(rotate(center, p_bottom_left.x - center_box.x, p_bottom_left.y - center_box.y, offset));
-		m_box.SetBottomRight(rotate(center, p_bottom_right.x - center_box.x, p_bottom_right.y - center_box.y, offset));
-		m_box.SetTopLeft(rotate(center, p_top_left.x - center_box.x, p_top_left.y - center_box.y, offset));
-		m_box.SetTopRight(rotate(center, p_top_right.x - center_box.x, p_top_right.y - center_box.y, offset));
-		*/
 	}
 	void move_x(const int offset) {
 		//for (size_t i = 0; i < m_points.size(); i++)
@@ -101,7 +78,7 @@ protected:
 	wxBrush m_brush{};
 	wxPen m_pen{};
 	wxRect m_box{};
-	std::array<wxPoint, 3> m_points{};
+	std::array<wxRealPoint, 3> m_points{};
 	wxPoint m_middle{};
 	virtual void do_draw(context_t& context) const = 0;
 };
