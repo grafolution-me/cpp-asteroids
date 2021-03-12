@@ -383,6 +383,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\asteriods\src\triangle.h" />
+    <ClInclude Include="..\asteriods\src\utils.h" />
     <ClInclude Include="Header.h" />
     <Image Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteriods\images\astroid.png">
     </Image>
