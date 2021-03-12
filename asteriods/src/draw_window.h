@@ -27,12 +27,11 @@ class draw_window : public ml5::window, MI5_DERIVE(draw_window, ml5::window){
 		wxPoint point_bottom_left{ (draw_window::get_width() / 2) - SHIP_SIZE/2, (draw_window::get_height() / 2) + SHIP_SIZE };
 		wxPoint point_bottom_right{ (draw_window::get_width() / 2) + SHIP_SIZE/2, (draw_window::get_height() / 2) + SHIP_SIZE };
 		std::array<wxRealPoint, 3> points{ point_top, point_bottom_right, point_bottom_left };
-		m_p_player = std::make_unique<triangle>(wxRect{ point_top_left, point_bottom_right }, points, point_bottom_left, m_pen, m_brush);
+		m_p_player = std::make_unique<triangle>(wxRect{ point_top_left, point_bottom_right }, points, m_pen, m_brush);
 
 	}
 	virtual void on_key(ml5::key_event const& event) {
 		int key_code = event.get_key_code();
-		
 		switch (key_code) {
 			case key_mapping::left:
 				if (m_p_player)  m_p_player->move(-30);
@@ -58,7 +57,6 @@ class draw_window : public ml5::window, MI5_DERIVE(draw_window, ml5::window){
 	}
 
 	void on_mouse_move(ml5::mouse_event const& event)override {
-		
 	}
 
 	void on_paint(ml5::paint_event const& event)override {

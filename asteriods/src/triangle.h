@@ -4,7 +4,7 @@ class triangle : public shape, MI5_DERIVE(triangle, shape) {
 	MI5_INJECT(triangle);
 public:
 	using base = shape;
-	triangle(const wxRect& box, const std::array<wxRealPoint, 3> points, wxPoint middle, const wxPen& pen, const wxBrush& brush) :base(box, points, middle, pen, brush) {
+	triangle(const wxRect& box, const std::array<wxRealPoint, 3> points, const wxPen& pen, const wxBrush& brush) :base(box, points, pen, brush) {
 
 	}
 
