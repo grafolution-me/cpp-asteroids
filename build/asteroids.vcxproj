@@ -22,11 +22,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{ADC75660-C01A-3FBD-AB2D-ACF7320D8EEB}</ProjectGuid>
+    <ProjectGuid>{E21BB474-E224-3549-B90A-E90F9264D45B}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
-    <ProjectName>asteriods</ProjectName>
+    <ProjectName>asteroids</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
     <VcpkgEnabled>false</VcpkgEnabled>
   </PropertyGroup>
@@ -61,26 +61,26 @@
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\build\bin\Debug\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">asteriods.dir\Debug\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">asteriods</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">asteroids.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">asteroids</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\build\bin\Release\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">asteriods.dir\Release\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">asteriods</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">asteroids.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">asteroids</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\build\bin\MinSizeRel\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">asteriods.dir\MinSizeRel\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">asteriods</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">asteroids.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">asteroids</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\build\bin\RelWithDebInfo\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">asteriods.dir\RelWithDebInfo\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">asteriods</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">asteroids.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">asteroids</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
@@ -122,7 +122,7 @@
       <Message>
       </Message>
       <Command>setlocal
-powershell -noprofile -executionpolicy Bypass -file C:/temp/SWO32/SWO3_LIBS_DIR/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/graff/OneDrive - FH OOe/studium/SWE Softwareentwicklung mit modernen Technologien/asteroids/src/build/bin/Debug/asteriods.exe" -installedDir C:/temp/SWO32/SWO3_LIBS_DIR/installed/x64-windows/debug/bin -OutVariable out
+powershell -noprofile -executionpolicy Bypass -file C:/temp/SWO32/SWO3_LIBS_DIR/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/graff/OneDrive - FH OOe/studium/SWE Softwareentwicklung mit modernen Technologien/asteroids/src/build/bin/Debug/asteroids.exe" -installedDir C:/temp/SWO32/SWO3_LIBS_DIR/installed/x64-windows/debug/bin -OutVariable out
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -137,8 +137,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/graff/OneDrive - FH OOe/studium/SWE Softwareentwicklung mit modernen Technologien/asteroids/src/build/lib/static/Debug/asteriods.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/graff/OneDrive - FH OOe/studium/SWE Softwareentwicklung mit modernen Technologien/asteroids/src/build/bin/Debug/asteriods.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/graff/OneDrive - FH OOe/studium/SWE Softwareentwicklung mit modernen Technologien/asteroids/src/build/lib/static/Debug/asteroids.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/graff/OneDrive - FH OOe/studium/SWE Softwareentwicklung mit modernen Technologien/asteroids/src/build/bin/Debug/asteroids.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -182,7 +182,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Message>
       </Message>
       <Command>setlocal
-powershell -noprofile -executionpolicy Bypass -file C:/temp/SWO32/SWO3_LIBS_DIR/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/graff/OneDrive - FH OOe/studium/SWE Softwareentwicklung mit modernen Technologien/asteroids/src/build/bin/Release/asteriods.exe" -installedDir C:/temp/SWO32/SWO3_LIBS_DIR/installed/x64-windows/bin -OutVariable out
+powershell -noprofile -executionpolicy Bypass -file C:/temp/SWO32/SWO3_LIBS_DIR/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/graff/OneDrive - FH OOe/studium/SWE Softwareentwicklung mit modernen Technologien/asteroids/src/build/bin/Release/asteroids.exe" -installedDir C:/temp/SWO32/SWO3_LIBS_DIR/installed/x64-windows/bin -OutVariable out
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -197,8 +197,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/graff/OneDrive - FH OOe/studium/SWE Softwareentwicklung mit modernen Technologien/asteroids/src/build/lib/static/Release/asteriods.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/graff/OneDrive - FH OOe/studium/SWE Softwareentwicklung mit modernen Technologien/asteroids/src/build/bin/Release/asteriods.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/graff/OneDrive - FH OOe/studium/SWE Softwareentwicklung mit modernen Technologien/asteroids/src/build/lib/static/Release/asteroids.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/graff/OneDrive - FH OOe/studium/SWE Softwareentwicklung mit modernen Technologien/asteroids/src/build/bin/Release/asteroids.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -242,7 +242,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Message>
       </Message>
       <Command>setlocal
-powershell -noprofile -executionpolicy Bypass -file C:/temp/SWO32/SWO3_LIBS_DIR/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/graff/OneDrive - FH OOe/studium/SWE Softwareentwicklung mit modernen Technologien/asteroids/src/build/bin/MinSizeRel/asteriods.exe" -installedDir C:/temp/SWO32/SWO3_LIBS_DIR/installed/x64-windows/bin -OutVariable out
+powershell -noprofile -executionpolicy Bypass -file C:/temp/SWO32/SWO3_LIBS_DIR/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/graff/OneDrive - FH OOe/studium/SWE Softwareentwicklung mit modernen Technologien/asteroids/src/build/bin/MinSizeRel/asteroids.exe" -installedDir C:/temp/SWO32/SWO3_LIBS_DIR/installed/x64-windows/bin -OutVariable out
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -257,8 +257,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/graff/OneDrive - FH OOe/studium/SWE Softwareentwicklung mit modernen Technologien/asteroids/src/build/lib/static/MinSizeRel/asteriods.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/graff/OneDrive - FH OOe/studium/SWE Softwareentwicklung mit modernen Technologien/asteroids/src/build/bin/MinSizeRel/asteriods.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/graff/OneDrive - FH OOe/studium/SWE Softwareentwicklung mit modernen Technologien/asteroids/src/build/lib/static/MinSizeRel/asteroids.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/graff/OneDrive - FH OOe/studium/SWE Softwareentwicklung mit modernen Technologien/asteroids/src/build/bin/MinSizeRel/asteroids.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -301,7 +301,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Message>
       </Message>
       <Command>setlocal
-powershell -noprofile -executionpolicy Bypass -file C:/temp/SWO32/SWO3_LIBS_DIR/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/graff/OneDrive - FH OOe/studium/SWE Softwareentwicklung mit modernen Technologien/asteroids/src/build/bin/RelWithDebInfo/asteriods.exe" -installedDir C:/temp/SWO32/SWO3_LIBS_DIR/installed/x64-windows/bin -OutVariable out
+powershell -noprofile -executionpolicy Bypass -file C:/temp/SWO32/SWO3_LIBS_DIR/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/graff/OneDrive - FH OOe/studium/SWE Softwareentwicklung mit modernen Technologien/asteroids/src/build/bin/RelWithDebInfo/asteroids.exe" -installedDir C:/temp/SWO32/SWO3_LIBS_DIR/installed/x64-windows/bin -OutVariable out
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -316,8 +316,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/graff/OneDrive - FH OOe/studium/SWE Softwareentwicklung mit modernen Technologien/asteroids/src/build/lib/static/RelWithDebInfo/asteriods.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/graff/OneDrive - FH OOe/studium/SWE Softwareentwicklung mit modernen Technologien/asteroids/src/build/bin/RelWithDebInfo/asteriods.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/graff/OneDrive - FH OOe/studium/SWE Softwareentwicklung mit modernen Technologien/asteroids/src/build/lib/static/RelWithDebInfo/asteroids.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/graff/OneDrive - FH OOe/studium/SWE Softwareentwicklung mit modernen Technologien/asteroids/src/build/bin/RelWithDebInfo/asteroids.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -382,18 +382,22 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\asteriods\src\triangle.h" />
-    <ClInclude Include="..\asteriods\src\utils.h" />
-    <ClInclude Include="Header.h" />
-    <Image Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteriods\images\astroid.png">
+    <Image Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteroids\images\astroid.png">
     </Image>
-    <ClInclude Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteriods\src\draw_application.h" />
-    <ClInclude Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteriods\src\draw_window.h" />
-    <ClInclude Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteriods\src\ellipse.h" />
-    <ClInclude Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteriods\src\line.h" />
-    <ClCompile Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteriods\src\main.cpp" />
-    <ClInclude Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteriods\src\rectangle.h" />
-    <ClInclude Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteriods\src\shape.h" />
+    <ClInclude Include="..\asteroids\src\asteroid_size.h" />
+    <ClInclude Include="..\asteroids\src\constants.h" />
+    <ClInclude Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteroids\src\asteroid.h" />
+    <ClInclude Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteroids\src\draw_application.h" />
+    <ClInclude Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteroids\src\draw_window.h" />
+    <ClInclude Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteroids\src\ellipse.h" />
+    <ClInclude Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteroids\src\game_engine.h" />
+    <ClCompile Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteroids\src\main.cpp" />
+    <ClInclude Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteroids\src\projectile.h" />
+    <ClInclude Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteroids\src\random.h" />
+    <ClInclude Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteroids\src\rectangle.h" />
+    <ClInclude Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteroids\src\shape.h" />
+    <ClInclude Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteroids\src\ship.h" />
+    <ClInclude Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteroids\src\utils.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\build\ZERO_CHECK.vcxproj">

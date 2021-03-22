@@ -170,9 +170,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\build\asteriods.vcxproj">
-      <Project>{ADC75660-C01A-3FBD-AB2D-ACF7320D8EEB}</Project>
-      <Name>asteriods</Name>
+    <ProjectReference Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\build\asteroids.vcxproj">
+      <Project>{E21BB474-E224-3549-B90A-E90F9264D45B}</Project>
+      <Name>asteroids</Name>
     </ProjectReference>
     <ProjectReference Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\build\ml5\minilib.vcxproj">
       <Project>{B5E3EE0A-763C-3CA5-9EE9-3631F27B3F74}</Project>
