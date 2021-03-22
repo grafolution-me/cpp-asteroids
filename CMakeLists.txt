@@ -48,7 +48,7 @@ endfunction()
 
 add_subdirectory(ml5) #NOTE: there should be a local folder "ml5" next to the source folders that contains the ML5 distribution
 
-foreach(project asteriods)
+foreach(project asteroids)
    target(${project})
    target_link_libraries(${project} PRIVATE minilib)
    set_target_properties(${project} PROPERTIES FOLDER "Examples")
