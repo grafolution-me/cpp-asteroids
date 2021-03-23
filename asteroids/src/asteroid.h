@@ -5,8 +5,8 @@
 #include "shape.h"
 #include "asteroid_size.h"
 #include "utils.h"
-#define MIN_SPEED 0.2
-#define PROJECTILE_SIZE 3
+#include "constants.h"
+
 namespace asteroids {
 
 	class asteroid : public shape {
@@ -15,17 +15,17 @@ namespace asteroids {
 		
 		using base = shape;
 	public:
-		asteroid(const wxRect& box, const wxPen& pen, const wxBrush& brush, int speed, wxRealPoint pos, asteroid_size size, wxSize window_size, int rotation) :
-			base(box, pen, brush, window_size),
+		asteroid(const wxRect& box, const wxPen& pen, const wxBrush& brush, int speed, wxRealPoint pos, asteroid_size size, int rotation) :
+			base(box, pen, brush),
 			m_speed{ speed },
 			m_position{ pos },
 			m_size{size},
 			m_rotation{rotation}
 		{
 		}
-		asteroid( const wxPen& pen, const wxBrush& brush, wxSize window_size, int speed, wxRealPoint pos, 
+		asteroid( const wxPen& pen, const wxBrush& brush, int speed, wxRealPoint pos, 
 			asteroid_size size, int rotation) :
-			base( pen, brush, window_size),
+			base( pen, brush),
 
 			m_speed{ speed },
 			m_position{ pos },
@@ -33,11 +33,20 @@ namespace asteroids {
 			m_rotation{ rotation }
 		{
 		}
+		asteroid(const asteroid& a) :
+			base(a.m_pen, a.m_brush),
+
+			m_speed{ a.m_speed },
+			m_position{ a.m_position },
+			m_size{ a.m_size },
+			m_rotation{ a.m_rotation }
+		{
+		}
 		auto asteroid_size() const {
 			return m_size;
 		}
 
-		auto region() const -> wxRegion {
+		auto region() const {
 			wxCoord radius = (int)m_size;
 			wxCoord width = radius * 2;
 			wxCoord x = m_position.x - radius;
@@ -49,27 +58,37 @@ namespace asteroids {
 			context.DrawCircle(m_position, (wxCoord)m_size);
 		}
 		
-		bool has_collision(const wxRealPoint& position) {
-			wxRegion combined_region = region();
-			combined_region.Intersect(position.x, position.y, PROJECTILE_SIZE, PROJECTILE_SIZE);
-			return !combined_region.IsEmpty();
+		bool collision(wxRegion other_region) {
+			wxRegion current_region{ (wxCoord)m_position.x - ((int)m_size / 2), (wxCoord)m_position.y - ((int)m_size / 2), (int)m_size,  (int)m_size };
+			other_region.Intersect(current_region);
+			return !other_region.IsEmpty();
 		}
-
-		void move(const int f) override {
-			/*m_position.x += -cos(utils::degree_rad(get_rotation()));
-			m_position.y += -sin(utils::degree_rad(get_rotation()));*/
-		}
-		void move_forward() override {
-			m_position.x += sin(utils::degree_rad(m_rotation)) * m_speed;
-			m_position.y += -cos(utils::degree_rad(m_rotation)) * m_speed;
-			if (!is_point_valid(m_position)) {
-				is_point_valid_x(m_position);
-				is_point_valid_y(m_position);
+		void move_forward() override;
+		asteroid create_new_astroid_from_current() {
+			random r{};
+			if (m_size != asteroid_size::smallest) {
+				if (m_size == asteroid_size::medium) {
+					return asteroid{ this->m_pen, this->m_brush, r.get_random_number(1,3),  this->m_position,
+									 asteroid_size::smallest, r.get_random_number(0, 360) };
+				}
+				if (m_size == asteroid_size::large) {
+					return asteroid{ this->m_pen, this->m_brush, r.get_random_number(1,3),  this->m_position,
+									 asteroid_size::medium, r.get_random_number(0, 360) };
+				}
+				if (m_size == asteroid_size::xlarge) {
+					return asteroid{ this->m_pen, this->m_brush, r.get_random_number(1,3),  this->m_position,
+									 asteroid_size::large, r.get_random_number(0, 360) };
+				}
+			}
+			else {
+				return *this;
 			}
 		}
+		asteroids::asteroid_size get_size() {
+			return m_size;
+		}
 	private:
-		asteroids::asteroid_size 
-		m_size{asteroid_size::smallest};
+		asteroids::asteroid_size m_size{asteroid_size::smallest};
 		int m_speed{ 0 };
 		wxRealPoint m_position{ 0, 0 };
 		int m_rotation{0};

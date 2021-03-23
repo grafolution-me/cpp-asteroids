@@ -386,15 +386,17 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </Image>
     <ClInclude Include="..\asteroids\src\asteroid_size.h" />
     <ClInclude Include="..\asteroids\src\constants.h" />
+    <ClInclude Include="..\asteroids\src\game_engine.h" />
     <ClInclude Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteroids\src\asteroid.h" />
     <ClInclude Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteroids\src\draw_application.h" />
     <ClInclude Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteroids\src\draw_window.h" />
     <ClInclude Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteroids\src\ellipse.h" />
-    <ClInclude Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteroids\src\game_engine.h" />
+    <ClCompile Include="..\asteroids\src\asteroid.cpp" />
+    <ClCompile Include="..\asteroids\src\ship.cpp" />
+    <ClCompile Include="..\asteroids\src\utils.cpp" />
     <ClCompile Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteroids\src\main.cpp" />
     <ClInclude Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteroids\src\projectile.h" />
     <ClInclude Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteroids\src\random.h" />
-    <ClInclude Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteroids\src\rectangle.h" />
     <ClInclude Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteroids\src\shape.h" />
     <ClInclude Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteroids\src\ship.h" />
     <ClInclude Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteroids\src\utils.h" />

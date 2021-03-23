@@ -1,0 +1,10 @@
+^C:\USERS\GRAFF\ONEDRIVE - FH OOE\STUDIUM\SWE SOFTWAREENTWICKLUNG MIT MODERNEN TECHNOLOGIEN\ASTEROIDS\SRC\ML5\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/graff/OneDrive - FH OOe/studium/SWE Softwareentwicklung mit modernen Technologien/asteroids/src" "-BC:/Users/graff/OneDrive - FH OOe/studium/SWE Softwareentwicklung mit modernen Technologien/asteroids/src/build" --check-stamp-file "C:/Users/graff/OneDrive - FH OOe/studium/SWE Softwareentwicklung mit modernen Technologien/asteroids/src/build/ml5/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
