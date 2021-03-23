@@ -1,29 +1,51 @@
 #pragma once
 
-#include "game_object.hpp"
-#include "utils.hpp"
-
-#define PROJECTILE_SIZE 3
-
+#include "shape.h"
+#include <ml5/ml5.h>
+#include "constants.h"
+#include "utils.h"
 namespace asteroids {
 
-	class projectile : public game_object {
+	class projectile : public shape {
 
+	protected:
+		using base = shape;
 	public:
-		projectile(wxPoint position, double degree)
-			: game_object{ position, degree } {
-			speed_ = 5;
+		 projectile( const wxPen& pen, const wxBrush& brush, int speed, wxRealPoint pos, double rotation)
+			: base{pen, brush},
+				m_speed{speed},
+				m_position{pos},
+				m_rotation{rotation}
+			 {}
+		 projectile(const projectile& p)
+			: base{ p.m_pen, p.m_brush },
+			m_speed{ p.m_speed },
+			m_position{ p.m_position },
+			m_rotation{ p.m_rotation }
+		{}
+		 ~projectile() = default;
+		void do_draw(context_t& context) const override {
+			context.DrawCircle(m_position, PROJECTILE_SIZE);
+		}
+		void move_forward() override {
+			m_position.x += sin(utils::degree_rad(m_rotation)) * m_speed;
+			m_position.y += -cos(utils::degree_rad(m_rotation)) * m_speed;
+		}
+		wxRealPoint get_position() {
+			return m_position;
 		}
 
-		void draw(context& context) override {
-			context.SetBrush(*wxGREEN_BRUSH);
-			context.SetPen(*wxGREEN_PEN);
-			context.DrawCircle(position_, PROJECTILE_SIZE);
+		auto region() const {
+			wxCoord radius = (int)PROJECTILE_SIZE;
+			wxCoord width = radius * 2;
+			wxCoord x = m_position.x - radius;
+			wxCoord y = m_position.y - radius;
+			return wxRegion{ x, y, width, width };
 		}
 
-		void move(const wxSize& size) override {
-			position_.x += sin(degree_to_radian(degree_)) * speed_;
-			position_.y += -cos(degree_to_radian(degree_)) * speed_;
-		}
+	private:
+		wxRealPoint m_position{};
+		int m_speed{ 1 };
+		double m_rotation;
 	};
 }
