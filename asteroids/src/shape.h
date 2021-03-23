@@ -41,32 +41,6 @@ protected:
 	wxSize get_window_size() {
 		return m_window_size;
 	}
-
-	/*bool is_point_valid(wxRealPoint& point) {
-		if ((point.x >= 0 && point.x <= this->get_window_size().x) &&
-			(point.y >= 0 && point.y <= this->get_window_size().y)) {
-			return true;
-		}
-		else return false;
-
-	}
-	void is_point_valid_x(wxRealPoint& point) {
-		if (point.x <= 0) {
-			point.x = point.x + get_window_size().x;
-		}
-		else {
-			point.x = (int)point.x % get_window_size().x;
-		}
-
-	}
-	void is_point_valid_y(wxRealPoint& point) {
-		if (point.y <= 0) {
-			point.y = point.y + get_window_size().y;
-		}
-		else {
-			point.y = (int)point.y % get_window_size().y;
-		}
-	}*/
 	
 private:
 	wxSize m_window_size;

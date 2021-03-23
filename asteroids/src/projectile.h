@@ -25,7 +25,7 @@ namespace asteroids {
 		{}
 		 ~projectile() = default;
 		void do_draw(context_t& context) const override {
-			context.DrawCircle(m_position, PROJECTILE_SIZE);
+			context.DrawCircle(m_position, SIZE_PROJECTILE);
 		}
 		void move_forward() override {
 			m_position.x += sin(utils::degree_rad(m_rotation)) * m_speed;
@@ -36,7 +36,7 @@ namespace asteroids {
 		}
 
 		auto region() const {
-			wxCoord radius = (int)PROJECTILE_SIZE;
+			wxCoord radius = (int)SIZE_PROJECTILE;
 			wxCoord width = radius * 2;
 			wxCoord x = m_position.x - radius;
 			wxCoord y = m_position.y - radius;

@@ -5,7 +5,6 @@
 #include "shape.h"
 #include "line.h"
 #include "ship.h"
-#include "ellipse.h"
 #include "random.h"
 #include "asteroid.h"
 #include "constants.h"
@@ -64,15 +63,11 @@ public:
 			break;
 		case key_mapping::down:
 		case key_mapping::s:
-			if (m_p_player) {
-					m_p_player->deaccelerate();
-			}
+			if (m_p_player) m_p_player->deaccelerate();
 			break;
 		case key_mapping::up:
 		case key_mapping::w:
-			if (m_p_player) { 
-				m_p_player->accelerate();
-			};
+			if (m_p_player) m_p_player->accelerate();
 			break;
 		case key_mapping::space:
 			if (m_p_player) {

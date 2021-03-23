@@ -35,7 +35,6 @@ namespace asteroids {
 		}
 		asteroid(const asteroid& a) :
 			base(a.m_pen, a.m_brush),
-
 			m_speed{ a.m_speed },
 			m_position{ a.m_position },
 			m_size{ a.m_size },
@@ -47,10 +46,13 @@ namespace asteroids {
 		}
 
 		auto region() const {
-			wxCoord radius = (int)m_size;
-			wxCoord width = radius * 2;
-			wxCoord x = m_position.x - radius;
-			wxCoord y = m_position.y - radius;
+			wxCoord r = (int)m_size;
+			wxCoord width = r * 2;
+
+
+			wxCoord y = m_position.y - r;
+			wxCoord x = m_position.x - r;
+			
 			return wxRegion{ x, y, width, width };
 		}
 
@@ -58,10 +60,10 @@ namespace asteroids {
 			context.DrawCircle(m_position, (wxCoord)m_size);
 		}
 		
-		bool collision(wxRegion other_region) {
-			wxRegion current_region{ (wxCoord)m_position.x - ((int)m_size / 2), (wxCoord)m_position.y - ((int)m_size / 2), (int)m_size,  (int)m_size };
-			other_region.Intersect(current_region);
-			return !other_region.IsEmpty();
+		bool collision(wxRegion their_region) {
+			wxRegion this_region{ (wxCoord)m_position.x - ((int)m_size / 2), (wxCoord)m_position.y - ((int)m_size / 2), (int)m_size,  (int)m_size };
+			their_region.Intersect(this_region);
+			return !their_region.IsEmpty();
 		}
 		void move_forward() override;
 		asteroid create_new_astroid_from_current() {

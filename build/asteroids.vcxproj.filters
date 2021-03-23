@@ -27,9 +27,6 @@
     <ClInclude Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteroids\src\random.h">
       <Filter>Header Files\utils</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteroids\src\ellipse.h">
-      <Filter>Header Files\objects</Filter>
-    </ClInclude>
     <ClInclude Include="C:\Users\graff\OneDrive - FH OOe\studium\SWE Softwareentwicklung mit modernen Technologien\asteroids\src\asteroids\src\ship.h">
       <Filter>Header Files\objects</Filter>
     </ClInclude>
